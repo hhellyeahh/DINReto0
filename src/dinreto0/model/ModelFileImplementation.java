@@ -6,12 +6,9 @@
 package dinreto0.model;
 
 import exceptions.ExceptionManager;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import java.util.ResourceBundle;
+
 
 /**
  *
@@ -22,29 +19,8 @@ public class ModelFileImplementation implements Model {
     @Override
     public String getGreeting()throws ExceptionManager {
         
-      Properties prop = getFile("config.properties");
-    String greeting =  prop.getProperty("GREETING");
-        return greeting;
-
+        String  Greeting = ResourceBundle.getBundle("dinreto0.model/config").getString("GREETING");
+        return Greeting;
+    }
 }
-
-    private Properties getFile(String configpropeerties) throws ExceptionManager {
-      FileInputStream fis = null;
-      Properties prop = null;
-       try {
-         fis = new FileInputStream(configpropeerties);
-         prop = new Properties();
-         prop.load(fis);  
-         fis.close();
-      
-      } catch(IOException ioe) {
-        String error = "CANT GET THE GREETING";
-			ExceptionManager uwu = new ExceptionManager(error);
-			throw uwu;
-      } 
-      
-      
-        return prop;
-       
-    }   
-}
+  

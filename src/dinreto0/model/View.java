@@ -3,18 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dinreto0.ui;
+package dinreto0.model;
 
 /**
  *
  * @author 2dam
  */
-public class ViewConsoleImplementation implements View {
-
-    @Override
-    public void showGreeting(String greeting) {
-        System.out.println(greeting);
-    }
+public interface View {
     
-    
+    public void showGreeting (String greeting);
 }
