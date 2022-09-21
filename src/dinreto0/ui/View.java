@@ -9,7 +9,7 @@ package dinreto0.ui;
  *
  * @author 2dam
  */
-public interface viewManager {
+public interface View {
     
     public void showGreeting (String greeting);
 }

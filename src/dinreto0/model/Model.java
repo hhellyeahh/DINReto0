@@ -9,7 +9,7 @@ package dinreto0.model;
  *
  * @author 2dam
  */
-public interface modelManager {
+public interface Model {
     
     public String getGreeting();
 }
