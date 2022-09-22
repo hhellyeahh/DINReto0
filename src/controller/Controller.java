@@ -19,7 +19,7 @@ public class Controller {
     
     public static void run(View view, Model model) throws ExceptionManager{
        
-       
+        
             view.showGreeting(model.getGreeting());
        
         

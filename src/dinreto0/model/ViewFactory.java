@@ -21,5 +21,5 @@ public class ViewFactory {
 			data = new ViewConsoleImplementation();
 		}
 		return data;
-}
         }
+}

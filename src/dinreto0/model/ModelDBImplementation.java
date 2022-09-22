@@ -8,20 +8,49 @@ package dinreto0.model;
 import exceptions.ExceptionManager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
  * @author 2dam
  */
 public class ModelDBImplementation implements Model {
-     private Connection con;
-	private PreparedStatement stmt;
-	private ConnectionOpenClose conection = new ConnectionOpenClose();
+    private Connection con;
+    private PreparedStatement stmt;
+    private ConnectionOpenClose conection = new ConnectionOpenClose();
    
 
     @Override
     public String getGreeting() throws ExceptionManager {
-         return null;
-     
+        ResultSet rs = null;
+	String greeting = null;
+ 
+	con = conection.openConnection();
+        String getGreeting = "SELECT * FROM greeting";
+                
+         try{
+            stmt = con.prepareStatement(getGreeting);
+            rs = stmt.executeQuery();
+             
+            while (rs.next()) {
+                greeting = rs.getString("greeting");
+            }
+            
+            if (rs != null){  
+		rs.close(); 
+		conection.closeConnection(stmt, con);
+            }else{
+                System.out.println("efe");
+            }
+            
+         }catch (SQLException e) {
+             
+            String msg = "Error";
+            ExceptionManager x = new ExceptionManager(msg);
+            throw x;
+        }
+       
+        return greeting;
     }
 }

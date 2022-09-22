@@ -23,16 +23,21 @@ public class ConnectionOpenClose {
 	protected PreparedStatement stmt;
 
 	public ConnectionOpenClose() {
-		configFile = ResourceBundle.getBundle("controlador/config");
+		configFile = ResourceBundle.getBundle("dinreto0.model/config");
 		url = configFile.getString("URL");
 		user = configFile.getString("USER");
 		pass = configFile.getString("PASSWORD");
 	}
 
 	public Connection openConnection() throws ExceptionManager {
-		Connection con = null;
-		return con;
-	}
+        Connection con = null;
+        try {
+            con = DriverManager.getConnection(url, user, pass);
+        } catch (SQLException e) {
+            throw new ExceptionManager(e.getMessage());
+        }
+        return con;
+    }
 
 	public void closeConnection(PreparedStatement stmt, Connection con) throws SQLException {
 		if (stmt != null)

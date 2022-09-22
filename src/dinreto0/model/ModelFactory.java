@@ -5,6 +5,8 @@
  */
 package dinreto0.model;
 
+import java.util.ResourceBundle;
+
 /**
  *
  * @author 2dam
@@ -17,9 +19,19 @@ public class ModelFactory {
 	 * @return data Modelo de datos de tipo Mapa {@link MapManager}
 	 */
 	public static Model getModel() {
+            
+            Integer nmr = null;
+            String uwu = null;
+            uwu = ResourceBundle.getBundle("dinreto0.model/config").getString("MODEL");
+            nmr = Integer.parseInt(uwu);
+            
 		if (data == null) {
-			data = new ModelFileImplementation();
-		}
+                    if(nmr == 1){
+                        data = new ModelFileImplementation();
+                    }else{
+                        data = new ModelDBImplementation();
+                    }  	
+		}		
 		return data;
-}
+        }
 }
