@@ -12,6 +12,6 @@ import exceptions.ExceptionManager;
  * @author 2dam
  */
 public interface Model {
-    
+
     public String getGreeting() throws ExceptionManager;
 }

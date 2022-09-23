@@ -5,6 +5,7 @@
  */
 package dinreto0.model;
 
+import exceptions.ExceptionManager;
 import java.util.ResourceBundle;
 
 /**
@@ -12,26 +13,38 @@ import java.util.ResourceBundle;
  * @author 2dam
  */
 public class ModelFactory {
+
     private static Model data;
 
-	/**
-	 * Carga la variable data, si esta no esta cargada previamente
-	 * @return data Modelo de datos de tipo Mapa {@link MapManager}
-	 */
-	public static Model getModel() {
-            
-            Integer nmr = null;
-            String uwu = null;
-            uwu = ResourceBundle.getBundle("dinreto0.model/config").getString("MODEL");
-            nmr = Integer.parseInt(uwu);
-            
-		if (data == null) {
-                    if(nmr == 1){
+    /**
+     * Carga la variable data, si esta no esta cargada previamente
+     *
+     * @return data Modelo de datos de tipo Mapa {@link MapManager}
+     */
+    public static Model getModel() {
+        Integer nmr = null;
+        String uwu = null;
+        uwu = ResourceBundle.getBundle("dinreto0.model/config").getString("MODEL");
+        nmr = Integer.parseInt(uwu);
+
+        if (data == null) {
+            try {
+                switch (nmr) {
+
+                    case 1: {
                         data = new ModelFileImplementation();
-                    }else{
+
+                    }
+                    case 2: {
                         data = new ModelDBImplementation();
-                    }  	
-		}		
-		return data;
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
+
+        return data;
+    }
 }

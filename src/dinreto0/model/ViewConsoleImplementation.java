@@ -15,6 +15,4 @@ public class ViewConsoleImplementation implements View {
     public void showGreeting(String greeting) {
         System.out.println(greeting);
     }
-    
-    
 }

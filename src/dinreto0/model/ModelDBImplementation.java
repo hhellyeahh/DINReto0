@@ -16,41 +16,41 @@ import java.sql.SQLException;
  * @author 2dam
  */
 public class ModelDBImplementation implements Model {
+
     private Connection con;
     private PreparedStatement stmt;
     private ConnectionOpenClose conection = new ConnectionOpenClose();
-   
 
     @Override
     public String getGreeting() throws ExceptionManager {
         ResultSet rs = null;
-	String greeting = null;
- 
-	con = conection.openConnection();
+        String greeting = null;
+
+        con = conection.openConnection();
         String getGreeting = "SELECT * FROM greeting";
-                
-         try{
+
+        try {
             stmt = con.prepareStatement(getGreeting);
             rs = stmt.executeQuery();
-             
+
             while (rs.next()) {
                 greeting = rs.getString("greeting");
             }
-            
-            if (rs != null){  
-		rs.close(); 
-		conection.closeConnection(stmt, con);
-            }else{
+
+            if (rs != null) {
+                rs.close();
+                conection.closeConnection(stmt, con);
+            } else {
                 System.out.println("efe");
             }
-            
-         }catch (SQLException e) {
-             
+
+        } catch (SQLException e) {
+
             String msg = "Error";
             ExceptionManager x = new ExceptionManager(msg);
             throw x;
         }
-       
+
         return greeting;
     }
 }

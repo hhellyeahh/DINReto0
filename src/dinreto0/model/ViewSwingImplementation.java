@@ -5,11 +5,17 @@
  */
 package dinreto0.model;
 
+import dinreto0.ui.SwingView;
+
 /**
  *
  * @author 2dam
  */
-public interface View {
+public class ViewSwingImplementation implements View {
 
-    public void showGreeting(String greeting);
+    @Override
+    public void showGreeting(String greeting) {
+        SwingView swing = new SwingView(greeting);
+        swing.setVisible(true);
+    }
 }

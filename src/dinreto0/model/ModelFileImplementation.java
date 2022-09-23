@@ -9,7 +9,6 @@ import exceptions.ExceptionManager;
 
 import java.util.ResourceBundle;
 
-
 /**
  *
  * @author 2dam
@@ -17,10 +16,9 @@ import java.util.ResourceBundle;
 public class ModelFileImplementation implements Model {
 
     @Override
-    public String getGreeting()throws ExceptionManager {
-        
-        String  Greeting = ResourceBundle.getBundle("dinreto0.model/config").getString("GREETING");
+    public String getGreeting() throws ExceptionManager {
+
+        String Greeting = ResourceBundle.getBundle("dinreto0.model/config").getString("GREETING");
         return Greeting;
     }
 }
-  
