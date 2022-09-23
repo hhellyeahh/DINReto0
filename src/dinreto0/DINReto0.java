@@ -23,17 +23,10 @@ public class DINReto0 {
      */
     public static void main(String[] args) {
         
-       
-        View view = ViewFactory.getView();
-        Model model = ModelFactory.getModel();    
         try {
-            Controller.run(view,model);
-        } catch (ExceptionManager ex) {
-            Logger.getLogger(DINReto0.class.getName()).log(Level.SEVERE, null, ex);
+            new Controller().run(ViewFactory.getView(),ModelFactory.getModel());
+        } catch (Exception ex) {
+            System.out.println(ex.getLocalizedMessage());
         }
-        
-        
-        
-        }
-    
+    }  
 }

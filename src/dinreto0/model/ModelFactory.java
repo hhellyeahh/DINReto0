@@ -21,28 +21,19 @@ public class ModelFactory {
      *
      * @return data Modelo de datos de tipo Mapa {@link MapManager}
      */
-    public static Model getModel() {
-        Integer nmr = null;
-        String uwu = null;
-        uwu = ResourceBundle.getBundle("dinreto0.model/config").getString("MODEL");
-        nmr = Integer.parseInt(uwu);
+    public static Model getModel() throws UnknownModelTypeException{
 
-        if (data == null) {
-            try {
-                switch (nmr) {
-
-                    case 1: {
+        switch (ResourceBundle.getBundle("dinreto0.model/config").getString("MODEL")) {
+            case "FILE": 
                         data = new ModelFileImplementation();
-
-                    }
-                    case 2: {
+                        break;
+                    
+            case "BD": 
                         data = new ModelDBImplementation();
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
+                        break;
+            default:
+                        throw new UnknownModelTypeException("That type of model is not valid.");
+                
         }
 
         return data;
