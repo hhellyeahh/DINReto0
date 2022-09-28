@@ -21,19 +21,19 @@ public class ModelFactory {
      *
      * @return data Modelo de datos de tipo Mapa {@link MapManager}
      */
-    public static Model getModel() throws UnknownModelTypeException{
+    public static Model getModel() throws UnknownModelTypeException {
 
         switch (ResourceBundle.getBundle("dinreto0.model/config").getString("MODEL")) {
-            case "FILE": 
-                        data = new ModelFileImplementation();
-                        break;
-                    
-            case "BD": 
-                        data = new ModelDBImplementation();
-                        break;
+            case "FILE":
+                data = new ModelFileImplementation();
+                break;
+
+            case "BD":
+                data = new ModelDBImplementation();
+                break;
             default:
-                        throw new UnknownModelTypeException("That type of model is not valid.");
-                
+                throw new UnknownModelTypeException("That type of model is not valid.");
+
         }
 
         return data;

@@ -18,20 +18,23 @@ public class ViewFactory {
     /**
      * Carga la variable data, si esta no esta cargada previamente
      *
-     * @return data Modelo de datos de tipo Mapa {@link MapManager}
+     * @return data View de datos de tipo Mapa {@link MapManager}
      */
-    public static View getView() {
-        Integer nmr = null;
-        String uwu = null;
-        uwu = ResourceBundle.getBundle("dinreto0.model/config").getString("VIEW");
-        nmr = Integer.parseInt(uwu);
-        if (data == null) {
-            if (nmr == 1) {
+    public static View getView() throws UnknownModelTypeException {
+
+        switch (ResourceBundle.getBundle("dinreto0.model/config").getString("VIEW")) {
+            case "TEXT":
                 data = new ViewConsoleImplementation();
-            } else if (nmr == 2) {
+                break;
+
+            case "GRAPH":
                 data = new ViewSwingImplementation();
-            } 
+                break;
+            default:
+                throw new UnknownModelTypeException("That type of view is not valid.");
+
         }
         return data;
     }
+
 }
