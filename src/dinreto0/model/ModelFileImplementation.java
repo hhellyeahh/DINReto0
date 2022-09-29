@@ -16,7 +16,8 @@ import java.util.ResourceBundle;
 public class ModelFileImplementation implements Model {
 
     /**
-     * 
+     * Save in the greeting the greeting that is in the 
+     * properties and return it
      * @return greeting
      * @throws ExceptionManager 
      */

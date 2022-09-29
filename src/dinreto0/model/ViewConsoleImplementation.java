@@ -7,10 +7,15 @@ package dinreto0.model;
 
 /**
  *
- * @author 2dam
+ * @author Zuli&Leire
  */
 public class ViewConsoleImplementation implements View {
 
+    /**
+     * It sends you a greeting and prints 
+     * it to you on the console
+     * @param greeting 
+     */
     @Override
     public void showGreeting(String greeting) {
         System.out.println(greeting);

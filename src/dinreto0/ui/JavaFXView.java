@@ -14,15 +14,18 @@ public class JavaFXView extends Application {
 
     /**
      * start JAVAFX components
-     *
+     * When you launch the JavaFX aplication 
+     * you take the string that you send on the launch
+     * and create a new text object, then you build the panel 
+     * with the messages, set a new scene and build it
      * @param stage
      * @throws Exception
      */
     @Override
     public void start(Stage stage) throws Exception {
-        String parameter = getParameters().getRaw().get(0);
-        Text greeting = new Text(parameter);
-
+        String msg = getParameters().getRaw().get(0);
+        Text greeting = new Text(msg);
+        
         StackPane root = new StackPane();
         root.getChildren().add(greeting);
 

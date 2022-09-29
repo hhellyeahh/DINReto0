@@ -9,10 +9,14 @@ import dinreto0.ui.SwingView;
 
 /**
  *
- * @author 2dam
+ * @author Zuli&Leire
  */
 public class ViewSwingImplementation implements View {
 
+    /**
+     * Implementation for de swing view
+     * @param greeting 
+     */
     @Override
     public void showGreeting(String greeting) {
         SwingView swing = new SwingView(greeting);

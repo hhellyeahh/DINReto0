@@ -8,9 +8,8 @@ package dinreto0.model;
 import exceptions.ExceptionManager;
 
 /**
- *
- * @author Zuli&Leire
  * Model is an interface 
+ * @author Zuli&Leire
  */
 public interface Model {
 

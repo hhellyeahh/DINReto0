@@ -10,10 +10,14 @@ import javafx.application.Application;
 
 /**
  *
- * @author 2dam
+ * @author Zuli
  */
 public class ViewJavaFXImplementation implements View{
 
+    /**
+     * Implementation for JavaFX
+     * @param greeting 
+     */
     @Override
     public void showGreeting(String greeting) {
         Application.launch(JavaFXView.class,greeting );

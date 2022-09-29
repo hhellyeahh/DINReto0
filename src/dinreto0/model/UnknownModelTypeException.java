@@ -7,13 +7,20 @@ package dinreto0.model;
 
 /**
  *
- * @author 2dam
+ * @author Zuli&Leire
  */
 public class UnknownModelTypeException extends Exception {
 
+    /**
+     * Is an empty constructor
+     */
     public UnknownModelTypeException() {
     }
     
+    /**
+     * If there is an exception it returns a message
+     * @param message 
+     */
     public UnknownModelTypeException(String message) {
         super(message);
     }
