@@ -19,7 +19,7 @@ public class ModelFactory {
     /**
      * Carga la variable data, si esta no esta cargada previamente
      *
-     * @return data Modelo de datos de tipo Mapa {@link MapManager}
+     * @return data Model
      */
     public static Model getModel() throws UnknownModelTypeException {
 

@@ -7,7 +7,7 @@ package dinreto0.ui;
 
 /**
  *
- * @author 2dam
+ * @author Zuli
  */
 public class SwingView extends javax.swing.JFrame {
 

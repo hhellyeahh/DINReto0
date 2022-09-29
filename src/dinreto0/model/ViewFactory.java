@@ -18,7 +18,7 @@ public class ViewFactory {
     /**
      * Carga la variable data, si esta no esta cargada previamente
      *
-     * @return data View de datos de tipo Mapa {@link MapManager}
+     * @return data View de datos de tipo Mapa
      */
     public static View getView() throws UnknownModelTypeException {
 
@@ -30,6 +30,9 @@ public class ViewFactory {
             case "GRAPH":
                 data = new ViewSwingImplementation();
                 break;
+               case "FX":
+                data = new ViewJavaFXImplementation();
+                break;  
             default:
                 throw new UnknownModelTypeException("That type of view is not valid.");
 
