@@ -25,7 +25,7 @@ public class ModelFileImplementationTest extends TestCase {
      */
     @Test
     public void testGetGreeting() throws Exception {
-        String greeting = "HELLO WORLD uwu";
+        String greeting = "Hello World uwu FILE";
         ModelFileImplementation m = new ModelFileImplementation();
         assertEquals(greeting, m.getGreeting());
     } 

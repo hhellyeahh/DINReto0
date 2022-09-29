@@ -23,8 +23,9 @@ public class ModelDBImplementationTest extends TestCase {
      */
     @Test
     public void testGetGreeting() throws Exception {
-        String greeting = "hola mundo BD uwu";
+        String greeting = "Hello World uwu BD";
         ModelDBImplementation m = new ModelDBImplementation();
         assertEquals(greeting, m.getGreeting());
     } 
+
 }
