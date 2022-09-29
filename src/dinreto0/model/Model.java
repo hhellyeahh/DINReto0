@@ -9,9 +9,15 @@ import exceptions.ExceptionManager;
 
 /**
  *
- * @author 2dam
+ * @author Zuli&Leire
+ * Model is an interface 
  */
 public interface Model {
 
+    /**
+     * This method returns a strings depending to the implementation
+     * @return greeting
+     * @throws ExceptionManager 
+     */
     public String getGreeting() throws ExceptionManager;
 }

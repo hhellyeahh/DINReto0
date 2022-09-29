@@ -7,9 +7,13 @@ package dinreto0.model;
 
 /**
  *
- * @author 2dam
+ * @author Zuli&Leire
+ * View is an interface 
  */
 public interface View {
-
+    /**
+     * This method send a string depending to the view implementation
+     * @param greeting 
+     */
     public void showGreeting(String greeting);
 }

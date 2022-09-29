@@ -10,15 +10,14 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author 2dam
+ * @author Zuli&Leire
  */
 public class ModelFactory {
 
     private static Model data;
 
     /**
-     * Carga la variable data, si esta no esta cargada previamente
-     *
+     * Load the data variable, if it is not previously loaded
      * @return data Model
      */
     public static Model getModel() throws UnknownModelTypeException {

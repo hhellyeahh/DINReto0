@@ -11,10 +11,15 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author 2dam
+ * @author Zuli&Leire
  */
 public class ModelFileImplementation implements Model {
 
+    /**
+     * 
+     * @return greeting
+     * @throws ExceptionManager 
+     */
     @Override
     public String getGreeting() throws ExceptionManager {
 

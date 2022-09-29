@@ -13,6 +13,11 @@ import java.util.ResourceBundle;
 
 import exceptions.ExceptionManager;
 
+/**
+ * 
+ * @author Zuli&Leire
+ */
+
 public class ConnectionOpenClose {
 
     protected ResourceBundle configFile;
@@ -22,6 +27,10 @@ public class ConnectionOpenClose {
     protected Connection con;
     protected PreparedStatement stmt;
 
+    /**
+     * It saves information from the propierties file in order to
+     * open and close the MySQL conection
+     */
     public ConnectionOpenClose() {
         configFile = ResourceBundle.getBundle("dinreto0.model/config");
         url = configFile.getString("URL");
@@ -29,6 +38,9 @@ public class ConnectionOpenClose {
         pass = configFile.getString("PASSWORD");
     }
 
+    /**
+     * Open a MySQL conection
+     */
     public Connection openConnection() throws ExceptionManager {
         Connection con = null;
         try {
@@ -39,6 +51,9 @@ public class ConnectionOpenClose {
         return con;
     }
 
+    /**
+     * Close a MySQL conection
+     */
     public void closeConnection(PreparedStatement stmt, Connection con) throws SQLException {
         if (stmt != null) {
             stmt.close();

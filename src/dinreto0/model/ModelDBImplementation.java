@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author 2dam
+ * @author Zuli&Leire
  */
 public class ModelDBImplementation implements Model {
 
@@ -21,6 +21,11 @@ public class ModelDBImplementation implements Model {
     private PreparedStatement stmt;
     private ConnectionOpenClose conection = new ConnectionOpenClose();
 
+    /**
+     * Open a MySQL conection and returns the greeting
+     * @return greeting
+     * @throws ExceptionManager 
+     */
     @Override
     public String getGreeting() throws ExceptionManager {
         ResultSet rs = null;

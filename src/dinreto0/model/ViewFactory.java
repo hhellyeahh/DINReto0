@@ -9,16 +9,15 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author 2dam
+ * @author Zuli&Leire
  */
 public class ViewFactory {
 
     private static View data;
 
     /**
-     * Carga la variable data, si esta no esta cargada previamente
-     *
-     * @return data View de datos de tipo Mapa
+     * Load the data variable, if it is not previously loaded
+     * @return data View 
      */
     public static View getView() throws UnknownModelTypeException {
 

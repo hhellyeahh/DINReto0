@@ -11,17 +11,21 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author 2dam
+ * 
+ * @author Zuli&Leire
  */
 public class Controller {
    
-    
+    /**
+     * 
+     * @param view
+     * @param model
+     * @throws ExceptionManager 
+     * Receive from the model the method getGreeting 
+     * and saves it in showGreeting
+     */
     public  void run(View view, Model model) throws ExceptionManager{
        
-        
             view.showGreeting(model.getGreeting());
-       
-        
     }
 }
