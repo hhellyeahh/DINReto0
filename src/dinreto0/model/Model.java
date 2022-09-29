@@ -9,7 +9,7 @@ import exceptions.ExceptionManager;
 
 /**
  * Model is an interface 
- * @author Zuli&Leire
+ * @author ZuliLeire
  */
 public interface Model {
 

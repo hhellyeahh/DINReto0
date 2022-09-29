@@ -9,7 +9,7 @@ import dinreto0.ui.SwingView;
 
 /**
  *
- * @author Zuli&Leire
+ * @author ZuliLeire
  */
 public class ViewSwingImplementation implements View {
 

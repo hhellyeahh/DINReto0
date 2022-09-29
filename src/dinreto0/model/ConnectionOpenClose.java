@@ -15,7 +15,7 @@ import exceptions.ExceptionManager;
 
 /**
  * 
- * @author Zuli&Leire
+ * @author ZuliLeire
  */
 
 public class ConnectionOpenClose {

@@ -12,17 +12,16 @@ import java.util.logging.Logger;
 
 /**
  * 
- * @author Zuli&Leire
+ * @author ZuliLeire
  */
 public class Controller {
    
     /**
-     * 
+     * Receive from the model the method getGreeting 
+     * and saves it in showGreeting
      * @param view
      * @param model
      * @throws ExceptionManager 
-     * Receive from the model the method getGreeting 
-     * and saves it in showGreeting
      */
     public  void run(View view, Model model) throws ExceptionManager{
        

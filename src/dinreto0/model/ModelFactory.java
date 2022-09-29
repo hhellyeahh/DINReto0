@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author Zuli&Leire
+ * @author ZuliLeire
  */
 public class ModelFactory {
 

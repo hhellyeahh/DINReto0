@@ -7,7 +7,7 @@ package dinreto0.model;
 
 /**
  * View is an interface 
- * @author Zuli&Leire
+ * @author ZuliLeire
  */
 public interface View {
     /**

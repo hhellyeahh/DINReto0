@@ -14,14 +14,14 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Zuli&Leire
+ * @author ZuliLeire
  */
 public class DINReto0 {
 
     /**
-     * @param args the command line arguments
      * It try to call the run method from the Controller
      * and catch an exception if the factories are not working well
+     * @param args the command line arguments
      */
     public static void main(String[] args) {
         

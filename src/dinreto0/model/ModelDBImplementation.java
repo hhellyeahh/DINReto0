@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Zuli&Leire
+ * @author ZuliLeire
  */
 public class ModelDBImplementation implements Model {
 

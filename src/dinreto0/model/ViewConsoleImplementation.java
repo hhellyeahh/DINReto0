@@ -7,7 +7,7 @@ package dinreto0.model;
 
 /**
  *
- * @author Zuli&Leire
+ * @author ZuliLeire
  */
 public class ViewConsoleImplementation implements View {
 
