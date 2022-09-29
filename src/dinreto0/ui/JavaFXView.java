@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class JavaFXView extends Application {
 
     /**
-     * Start method to get the JavaFX view components started
+     * start JAVAFX components
      *
      * @param stage
      * @throws Exception
@@ -28,7 +28,7 @@ public class JavaFXView extends Application {
 
         Scene scene = new Scene(root, 300, 250);
 
-        stage.setTitle("Hola");
+        stage.setTitle("Holi");
         stage.setScene(scene);
         stage.show();
     }
