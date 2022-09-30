@@ -18,7 +18,7 @@ public class JavaFXView extends Application {
      * you take the string that you send on the launch
      * and create a new text object, then you build the panel 
      * with the messages, set a new scene and build it
-     * @param stage
+     * @param stage The JavaFX Stage class is the top level JavaFX container
      * @throws Exception
      */
     @Override

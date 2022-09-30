@@ -16,7 +16,7 @@ public class ViewJavaFXImplementation implements View{
 
     /**
      * Implementation for JavaFX
-     * @param greeting 
+     * @param greeting it send it to the launch of the JAVAFX in order to build it
      */
     @Override
     public void showGreeting(String greeting) {

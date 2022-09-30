@@ -15,7 +15,7 @@ public class ViewSwingImplementation implements View {
 
     /**
      * Implementation for de swing view
-     * @param greeting 
+     * @param greeting the greeting to the Swing view
      */
     @Override
     public void showGreeting(String greeting) {

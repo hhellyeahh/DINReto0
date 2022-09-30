@@ -19,8 +19,8 @@ public class Controller {
     /**
      * Receive from the model the method getGreeting 
      * and saves it in showGreeting
-     * @param view
-     * @param model
+     * @param view the view implemented
+     * @param model the model implemented
      * @throws ExceptionManager 
      */
     public  void run(View view, Model model) throws ExceptionManager{

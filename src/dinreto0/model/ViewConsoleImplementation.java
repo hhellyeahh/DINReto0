@@ -14,7 +14,7 @@ public class ViewConsoleImplementation implements View {
     /**
      * It sends you a greeting and prints 
      * it to you on the console
-     * @param greeting 
+     * @param greeting send the greeting in order to print it to console
      */
     @Override
     public void showGreeting(String greeting) {

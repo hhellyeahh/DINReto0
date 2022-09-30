@@ -18,7 +18,7 @@ public class ModelFileImplementation implements Model {
     /**
      * Save in the greeting the greeting that is in the 
      * properties and return it
-     * @return greeting
+     * @return greeting retunrs the value of GREETING in the config.properties
      * @throws ExceptionManager 
      */
     @Override

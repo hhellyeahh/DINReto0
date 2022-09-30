@@ -23,7 +23,7 @@ public class ModelDBImplementation implements Model {
 
     /**
      * Open a MySQL conection and returns the greeting
-     * @return greeting
+     * @return greeting the message from the DB
      * @throws ExceptionManager 
      */
     @Override

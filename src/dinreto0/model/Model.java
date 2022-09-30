@@ -15,7 +15,7 @@ public interface Model {
 
     /**
      * This method returns a strings depending to the implementation
-     * @return greeting
+     * @return greeting the message we want to recieve
      * @throws ExceptionManager 
      */
     public String getGreeting() throws ExceptionManager;

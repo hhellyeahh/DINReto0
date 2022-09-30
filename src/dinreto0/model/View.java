@@ -12,7 +12,7 @@ package dinreto0.model;
 public interface View {
     /**
      * This method send a string depending to the view implementation
-     * @param greeting 
+     * @param greeting it sends the greeting to the View
      */
     public void showGreeting(String greeting);
 }
