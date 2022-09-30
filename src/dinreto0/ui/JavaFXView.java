@@ -18,19 +18,16 @@ public class JavaFXView extends Application {
      * you take the string that you send on the launch
      * and create a new text object, then you build the panel 
      * with the messages, set a new scene and build it
-     * @param stage The JavaFX Stage class is the top level JavaFX container
+     * @param stage The JavaFX Stage class is what we can call the window
      * @throws Exception
      */
     @Override
     public void start(Stage stage) throws Exception {
-        String msg = getParameters().getRaw().get(0);
-        Text greeting = new Text(msg);
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(greeting);
-
-        Scene scene = new Scene(root, 300, 250);
-
+        String msg = getParameters().getRaw().get(0); //get the first string on the launch method
+        Text greeting = new Text(msg); //set a Text object w/ the msg.
+        StackPane stack = new StackPane(); 
+        stack.getChildren().add(greeting); //adds the text to the panel
+        Scene scene = new Scene(stack, 300, 250); //build the scene
         stage.setTitle("Holi");
         stage.setScene(scene);
         stage.show();

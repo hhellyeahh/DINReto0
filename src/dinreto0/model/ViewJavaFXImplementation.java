@@ -20,7 +20,7 @@ public class ViewJavaFXImplementation implements View{
      */
     @Override
     public void showGreeting(String greeting) {
-        Application.launch(JavaFXView.class,greeting );
+        Application.launch(JavaFXView.class,greeting ); //launch
     }
     
 }
